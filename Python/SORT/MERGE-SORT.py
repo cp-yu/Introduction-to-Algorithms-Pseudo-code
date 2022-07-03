@@ -28,7 +28,7 @@ def MERGE_SORT(A,p,r):
         A=MERGE(A,p,q,r)
     return A
 
-def MERGE_2(A, p, q, r):
+def MERGE_2(A, p, q, r):# practice version
     n1 = q - p + 1
     n2 = r - q
     L = [0] * (n1)
@@ -58,7 +58,7 @@ def MERGE_2(A, p, q, r):
 
     return A
 
-def MERGE_3(A, p, q, r):
+def MERGE_3(A, p, q, r):# practice version with "try"
     n1 = q - p + 1
     n2 = r - q
     L = [0] * (n1)
