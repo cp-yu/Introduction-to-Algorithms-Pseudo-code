@@ -30,3 +30,15 @@ def FIND_MAXIMUN_SUBARRAY(A,low,high):
             return (right_low,right_high,right_sum)
         else:
             return (cross_low,cross_high,cross_sum)
+
+# this is a more efficient way using Dynamic programming. O(n)
+def FIND_MAXIMUN_SUBARRAY_2(A):
+    sum=0
+    max_sum=0
+    for i in range(len(A)):
+        sum=sum+A[i]
+        max_sum=max(sum,max_sum)
+        if sum<0:
+            sum=0
+    max_sum=max(sum,max_sum)
+    return  max_sum
