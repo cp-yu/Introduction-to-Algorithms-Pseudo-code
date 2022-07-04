@@ -23,6 +23,7 @@ def FIND_MAXIMUN_SUBARRAY(A,low,high):
         mid=(low+high)//2
         left_low,left_high,left_sum=FIND_MAXIMUN_SUBARRAY(A,low,mid)
         right_low,right_high,right_sum=FIND_MAXIMUN_SUBARRAY(A,mid+1,high)
+        #I think there should be someway to make full use of above "left_low,left_high" and "right_low,right_high"
         cross_low,cross_high,cross_sum=FIND_MAX_CROSSING_SUBARRAY(A,low,mid,high)
         if left_sum>=right_sum and left_sum>=cross_sum:
             return (left_low,left_high,left_sum)
