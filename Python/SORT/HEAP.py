@@ -68,4 +68,6 @@ def RIGHT(i):
 
 
 def PARENT(i):
-    return i // 2
+    if i == 0:
+        return 0
+    return (i - 1) // 2
