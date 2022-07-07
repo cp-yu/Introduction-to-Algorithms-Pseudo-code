@@ -1,5 +1,6 @@
-def COUNTING_SORT(A,B,k):
+def COUNTING_SORT(A,k):
     C=[0]*(k+1)
+    B=[0]*len(A)
     for j in range(len(A)):
         C[A[j]]=C[A[j]]+1
     for i in range(k+1):
